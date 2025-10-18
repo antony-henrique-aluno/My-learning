@@ -1,6 +1,7 @@
 .grid-layout{
     display: grid;
     grid-template-columns: auto repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: 
     "lado topo topo topo"
     "lado main main main"
@@ -8,11 +9,12 @@
     "lado extra1 extra2 extra3"
     "lado footer footer footer";
     
+    
     gap: .5rem;
     width: 100%;
     min-height: 100dvh;
     border: 2px solid black;
-    background: lightgray;
+    background: #0c0c0c;
 }
 
 .cabecalho{
@@ -21,12 +23,7 @@
     height: 60px;
 }
 
-.main{
-    background: #00daff;
-    grid-area: main;
-    min-height: 768px;
-    height: auto;
-}
+
 
 .lado{
     background: #9fff00;
