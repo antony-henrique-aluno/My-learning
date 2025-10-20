@@ -1,2 +1,2 @@
-@import "../components/header/header.css";
-@import "../components/main/main.css";
+@import "../layouts/header/index.css";
+@import "../layouts/sectionDiversos/index.css";

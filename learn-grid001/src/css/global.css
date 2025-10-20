@@ -1,60 +1,54 @@
-.grid-layout{
-    display: grid;
-    grid-template-columns: auto repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-    "lado topo topo topo"
-    "lado main main main"
-    "lado secao secao secao"
-    "lado extra1 extra2 extra3"
-    "lado footer footer footer";
-    
-    
-    gap: .5rem;
-    width: 100%;
-    min-height: 100dvh;
-    border: 2px solid black;
+html, body{
     background: #0c0c0c;
 }
 
+.grid-layout{
+    background: #0c0c0c;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 2fr auto;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "topo topo topo topo"
+    "diversos diversos diversos diversos"
+    "main main main tranding"
+    "footer footer footer footer";
+    gap: .5rem;
+}
+
 .cabecalho{
-    background: orangered;
+    background: green;
     grid-area: topo;
     height: 60px;
 }
 
-
-
-.lado{
-    background: #9fff00;
-    grid-area: lado;
-    width: 80px;
+.diversos{
+    background: red;
+    grid-area: diversos;
+    min-height: 480px;
+    height: auto;
+    background-image: linear-gradient(to bottom, #000000, #00000050, #000), url("../assets/images/cards/card003.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
-.secao{
-    grid-area: secao;
-    min-height: 300px;
-    background: orangered;
+.content-main{
+    background: purple;
+    grid-area: main;
+    min-height: 768px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-.extra1{
-    background: #f900ff;
-    grid-area: extra1;
-    min-height: 300px;
+.tranding{
+    background: orange;
+    grid-area: tranding;
 }
 
-.extra2{
-    background: #b200ff;
-    grid-area: extra2;
-}
-
-.extra3{
-    background: #f4ff00;
-    grid-area: extra3;
-}
-
-.rodape{
-    background: #ff1100;
+footer{
+    background: yellow;
     grid-area: footer;
-    height: 30px;
 }
