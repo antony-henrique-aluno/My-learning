@@ -1,8 +1,14 @@
+html, body{
+    background: #0c0c0c;
+}
+
 .grid-layout{
     background: #0c0c0c;
     min-height: 100dvh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 2fr auto;
+    grid-auto-rows: auto;
     grid-template-areas: 
     "topo topo topo topo"
     "diversos diversos diversos diversos"
@@ -20,8 +26,9 @@
 .diversos{
     background: red;
     grid-area: diversos;
-    height: 480px;
-    background-image: linear-gradient(to bottom, #00000050, #000), url("../assets/images/cards/card003.jpg");
+    min-height: 480px;
+    height: auto;
+    background-image: linear-gradient(to bottom, #000000, #00000050, #000), url("../assets/images/cards/card003.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -31,7 +38,9 @@
     background: purple;
     grid-area: main;
     min-height: 768px;
-    max-height: 90vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .tranding{

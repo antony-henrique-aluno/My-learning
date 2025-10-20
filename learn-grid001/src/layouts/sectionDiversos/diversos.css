@@ -1,0 +1,46 @@
+.diversos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.diversos{
+    
+    & .carrossel{
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* border: 2px solid red; */
+        
+        & .box-card{
+            flex: 0 0 200px;
+            height: 250px;
+            scroll-snap-align: center;
+            border: 2px solid red; 
+            border-radius: 1rem;
+            overflow: hidden;
+            
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s;
+                
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.diversos{
+    
+    & .box-search{
+        
+    }
+}

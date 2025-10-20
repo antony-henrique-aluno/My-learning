@@ -1,0 +1,67 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnMenu{
+    display: none;
+}
+
+.boxTitle{
+    /* border: 2px solid black; */
+    padding: .5rem;
+}
+
+.boxTitle{
+    & h1{
+        font-family: Verdana;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
+
+.navigation{
+    height: 100%;
+}
+
+.navigation{
+    
+    & ul{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: .5rem 1rem;
+        height: 100%;
+        /* border: 2px solid red; */
+        
+        & li{
+            width: 90px;
+            height: 38px;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: .3s;
+            
+            &:nth-child(5){
+                border: 2px solid #0c0c0c;
+                border-radius: 1rem;
+                background: linear-gradient(48deg, #3185ff, #005bb5);
+                box-shadow: 3px 5px 6px #0c0c0c50;
+            }
+            
+            &:hover{ 
+                transform: scale(1.1);
+            }
+            
+            & a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
