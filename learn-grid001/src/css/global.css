@@ -1,0 +1,45 @@
+.grid-layout{
+    background: #0c0c0c;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "topo topo topo topo"
+    "diversos diversos diversos diversos"
+    "main main main tranding"
+    "footer footer footer footer";
+    gap: .5rem;
+}
+
+.cabecalho{
+    background: green;
+    grid-area: topo;
+    height: 60px;
+}
+
+.diversos{
+    background: red;
+    grid-area: diversos;
+    height: 480px;
+    background-image: linear-gradient(to bottom, #00000050, #000), url("../assets/images/cards/card003.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.content-main{
+    background: purple;
+    grid-area: main;
+    min-height: 768px;
+    max-height: 90vh;
+}
+
+.tranding{
+    background: orange;
+    grid-area: tranding;
+}
+
+footer{
+    background: yellow;
+    grid-area: footer;
+}
