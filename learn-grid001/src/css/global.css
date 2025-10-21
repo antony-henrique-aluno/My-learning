@@ -1,5 +1,6 @@
 html, body{
     background: #0c0c0c;
+    scroll-behavior: smooth;
 }
 
 .grid-layout{
@@ -15,6 +16,7 @@ html, body{
     "main main main tranding"
     "footer footer footer tranding";
     gap: .5rem;
+    
 }
 
 .cabecalho{
