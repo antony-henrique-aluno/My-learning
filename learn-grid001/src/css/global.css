@@ -13,12 +13,12 @@ html, body{
     "topo topo topo topo"
     "diversos diversos diversos diversos"
     "main main main tranding"
-    "footer footer footer footer";
+    "footer footer footer tranding";
     gap: .5rem;
 }
 
 .cabecalho{
-    background: green;
+    background: linear-Gradient(48deg, #006281, #00394b);
     grid-area: topo;
     height: 60px;
 }
@@ -35,7 +35,7 @@ html, body{
 }
 
 .content-main{
-    background: purple;
+    background: linear-Gradient(48deg, #006281, #00394b);
     grid-area: main;
     min-height: 768px;
     overflow-y: auto;
@@ -44,11 +44,11 @@ html, body{
 }
 
 .tranding{
-    background: orange;
+    background: #0c0c0c;
     grid-area: tranding;
 }
 
 footer{
-    background: yellow;
+    background: linear-Gradient(48deg, #006281, #00394b);
     grid-area: footer;
 }
