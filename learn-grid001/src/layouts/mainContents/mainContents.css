@@ -1,0 +1,112 @@
+.content-main{
+    background: #0c0c0c;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: minmax(60px, auto) minmax(70px, auto);
+    grid-template-areas: 
+    "amiOnline secMainNav"
+    "reels reels";
+    gap: .5rem;
+    align-content: start;
+    
+    & .amigos-online{
+        background: linear-gradient(48deg, #006281, #00394b);
+        height: 60px;
+    }
+    
+    & .secMainNav{
+        background: linear-gradient(48deg, #006281, #00394b);
+        height: 60px;
+        grid-area: secMainNav;
+        
+        & ul{
+            /* border: 2px solid red; */
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem .5rem;
+            
+            & li{
+                position: relative;
+                /* border: 2px solid red; */
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                overflow: hidden;
+                
+                & > span{
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    background: #70ff43;
+                    border: 2px solid #006281;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: .6em;
+                    right: .6em;
+                    
+                    & > p{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: .6rem;
+                        color: #0c0c0c;
+                        font-weight: bolder;
+                    } 
+                }
+                
+                & a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    cursor: pointer;
+                    
+                    & i{
+                        font-size: 1.5rem;
+                        filter: drop-shadow(3px 3px .01em #0c0c0c10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content-main{
+    
+    & .reels{
+        grid-area: reels;
+        background: linear-gradient(48deg, #006281, #00394b);
+        
+        & .reels-carrossel{
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            /* border: 2px solid red; */
+            width: 100%;
+            padding: 1em;
+            gap: 2em;
+            
+            & > .boxContent{
+                display: flex;
+                justify-content: center;
+                width: 140px;
+                height: 200px;
+                align-items: center;
+                border: 2px solid yellow;
+                border-radius: .6em;
+                overflow: hidden;
+                scroll-snap-align: start;
+                
+                & > img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
