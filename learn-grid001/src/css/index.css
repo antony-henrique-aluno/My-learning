@@ -1,2 +1,5 @@
 @import "../layouts/header/index.css";
 @import "../layouts/sectionDiversos/index.css";
+@import "../layouts/asideTrandings/index.css";
+@import "../layouts/mainContents/index.css";
+@import "../components/modal/index.css"; 
