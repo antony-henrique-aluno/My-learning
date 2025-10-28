@@ -2,10 +2,11 @@
     background: #0c0c0c;
     display: grid;
     grid-template-columns: 230px 1fr;
-    grid-template-rows: minmax(60px, auto) minmax(70px, auto);
+    grid-template-rows: minmax(60px, auto) minmax(70px, auto) 1fr;
     grid-template-areas: 
     "amiOnline secMainNav"
-    "reels reels";
+    "reels reels"
+    "feed feed";
     gap: .5rem;
     align-content: start;
     
@@ -40,7 +41,7 @@
                     display: flex;
                     width: 16px;
                     height: 16px;
-                    background: #70ff43;
+                    background: #ff4343;
                     border: 2px solid #006281;
                     border-radius: 50%;
                     position: absolute;
@@ -108,5 +109,17 @@
                 }
             }
         }
+    }
+}
+
+
+.content-main{
+    
+    & .feed{
+        grid-area: feed;
+        background: linear-gradient(48deg, #006281, #00394b);
+        height: auto;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
     }
 }

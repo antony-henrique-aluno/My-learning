@@ -1,20 +1,29 @@
-.diversos{
+.grid-layout{
+    
     & .modal{
         position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
-        min-height: 100dvh;
+        height: 100%;
         z-index: 10000;
-        background: #00000050;
         display: none;
         justify-content: center;
         align-items: center;
+        background: #00000090;
         
-        & img{
-            width: 40vw;
-            height: 60vh;
-            object-fit: contain;
+        & > .boxImgContent{
+            position: relative;
+            max-width: 90vw;
+            height: 85vh;
+            border-radius: 1rem;
+            overflow: hidden;
+            
+            & > img{
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
